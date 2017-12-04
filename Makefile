@@ -6,7 +6,7 @@
 #    By: avenzel <avenzel@student.unit.ua>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/30 16:50:29 by avenzel           #+#    #+#              #
-#    Updated: 2016/12/03 12:52:10 by avenzel          ###   ########.fr        #
+#    Updated: 2017/12/04 20:09:02 by avenzel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC = ft_atoi.c	\
 	ft_isdigit.c	\
 	ft_isprint.c	\
 	ft_itoa.c	\
+	ft_itoa_base.c	\
 	ft_lstadd.c	\
 	ft_lstdel.c	\
 	ft_lstdelone.c	\

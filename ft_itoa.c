@@ -6,7 +6,7 @@
 /*   By: avenzel <avenzel@student.unit.ua>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/27 21:02:27 by avenzel           #+#    #+#             */
-/*   Updated: 2016/11/28 15:31:40 by avenzel          ###   ########.fr       */
+/*   Updated: 2017/12/04 19:58:42 by avenzel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,25 @@
 char	*ft_itoa(int n)
 {
 	char	*s;
-	int		tmp[2];
+	int		i;
+	int		val;
 
-	tmp[0] = n;
-	tmp[1] = 0;
-	while (tmp[0] /= 10)
-		tmp[1]++;
+	val = n;
+	i = 0;
+	while (val /= 10)
+		i++;
 	if (n < 0)
-		tmp[1]++;
-	if ((s = (char*)malloc(sizeof(char) * tmp[1] + 2)) == 0)
+		i++;
+	if ((s = (char*)malloc(sizeof(char) * i + 2)) == 0)
 		return (NULL);
 	if (n < 0)
 		s[0] = '-';
-	s[tmp[1] + 1] = '\0';
+	s[i + 1] = '\0';
 	if (n == 0)
-		s[tmp[1]--] = '0';
+		s[i--] = '0';
 	while (n)
 	{
-		if (n < 0)
-			s[tmp[1]--] = (-(n % 10)) + 48;
-		else
-			s[tmp[1]--] = (n % 10) + 48;
+		s[i--] = (n < 0) ? (-(n % 10)) + 48 : (n % 10) + 48;
 		n /= 10;
 	}
 	return (s);

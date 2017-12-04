@@ -6,7 +6,7 @@
 /*   By: avenzel <avenzel@student.unit.ua>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 14:13:25 by avenzel           #+#    #+#             */
-/*   Updated: 2016/12/03 12:56:01 by avenzel          ###   ########.fr       */
+/*   Updated: 2017/12/04 20:11:53 by avenzel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_atoi(const char *s);
+int					ft_atoi_base(const char *s, int base);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
